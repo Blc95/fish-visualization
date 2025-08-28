@@ -205,3 +205,13 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+data/fin_clip_file.csv
+
+# Ignore all CSVs in data folder
+data/*.csv
+
+# But keep the small sample file
+!data/sample_fish.csv
+
