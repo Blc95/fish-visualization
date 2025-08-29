@@ -215,3 +215,7 @@ data/*.csv
 # But keep the small sample file
 !data/sample_fish.csv
 
+# macOS Finder files
+.DS_Store
+
+
