@@ -83,7 +83,7 @@ fish-visualization/
 ├── notebooks/
 │   ├── scraper.ipynb       # scraping workflow
 │   └── app_dev.ipynb       # cleaning + Dash app
-├── docs/                   # screenshots (optional)
+├── docs/                   # screenshots
 ├── requirements.txt
 ├── README.md
 └── LICENSE
