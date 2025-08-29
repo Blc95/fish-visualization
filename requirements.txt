@@ -1,0 +1,11 @@
+dash
+dash-bootstrap-components
+dash-leaflet
+plotly
+pandas
+requests
+beautifulsoup4
+selenium
+jupyter     # optional, for running notebooks
+notebook    # optional, for running notebooks
+
