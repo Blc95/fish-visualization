@@ -73,6 +73,9 @@ The Dash app provides the following visualizations:
 
 ---
 
+## Folder Structure
+
+```text
 fish-visualization/
 ├── data/
 │   ├── fish.csv            # full dataset (~11 MB)
@@ -84,6 +87,7 @@ fish-visualization/
 ├── requirements.txt
 ├── README.md
 └── LICENSE
+```
 
 ---
 
