@@ -10,3 +10,8 @@
 To regenerate processed files, run:
 - `python3 scripts/normalize_geojson.py`
 
+Normalization applied to `Zone`:
+- Unicode normalization (NFKC)
+- Whitespace trimming
+- Casefolding (case-insensitive matching)
+
