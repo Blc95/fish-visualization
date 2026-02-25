@@ -5,6 +5,94 @@ The project scrapes open-access catch reports from various sources and presents 
 
 ---
 
+## Screenshots form App
+
+![screenshot_01](docs/screenshot_01.png)
+![screenshot_02](docs/screenshot_02.png)
+
+---
+
+## Features
+
+The Dash app provides the following visualizations:
+
+- **Sunburst Chart**: Explore hierarchical data of fish species, fin clip status, and bait type.  
+- **Geospatial Map**: Highlights creek zones with gradient color scale by catch density.  
+- **Bar Charts**:  
+  - Top anglers ranked by total catches (segmented by species).  
+  - Total fish caught per year, with monthly breakdown when filtering by year.  
+- **Stacked Area Chart**: Yearly/monthly trends in catches per species.  
+- **Violin Plots**: Distribution of fish lengths per species, showing variability and medians.  
+
+---
+
+## Folder Structure
+
+```text
+fish-visualization/
+├── app.py
+├── requirements.txt
+├── README.md
+├── LICENSE
+├── .gitignore
+├── data/
+│   ├── raw/
+│   │   ├── fish.csv
+│   │   └── creeks.geojson
+│   └── processed/
+│       └── normalized_creeks.geojson
+├── src/
+│   └── fishviz/
+│       ├── __init__.py
+│       ├── callbacks.py
+│       ├── config.py
+│       ├── data.py
+│       ├── initial_figures.py
+│       ├── layout.py
+│       └── figures/
+│           ├── __init__.py
+│           ├── charts.py
+│           └── map.py
+├── scripts/
+│   └── normalize_geojson.py
+├── notebooks/
+│   ├── app_dev.ipynb
+│   ├── cleaning_and_testing.ipynb
+│   └── exploration_app_dev.ipynb
+└── docs/
+    ├── screenshot_01.png
+    └── screenshot_02.png
+```
+
+## Run locally
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+PYTHONPATH=src python app.py
+
+
+---
+
+## Installation and Usage
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Blc95/fish-visualization.git
+cd fish-visualization
+
+# install dependencies
+pip install -r requirements.txt
+
+# Jupyter Notebook version
+jupyter notebook notebooks/app_dev.ipynb
+
+# or, if refactored into app.py
+python app.py
+```
+
 ## Data Sources
 
 The dataset was scraped from the following open-access sources:  
@@ -57,66 +145,6 @@ The dataset was scraped from the following open-access sources:
 
 ⚠️ Note: Coordinates are currently only available for selected creeks around **Varde** and **Skjern**, so the map visualization is limited to these zones.
 
----
-
-## Features
-
-The Dash app provides the following visualizations:
-
-- **Sunburst Chart**: Explore hierarchical data of fish species, fin clip status, and bait type.  
-- **Geospatial Map**: Highlights creek zones with gradient color scale by catch density.  
-- **Bar Charts**:  
-  - Top anglers ranked by total catches (segmented by species).  
-  - Total fish caught per year, with monthly breakdown when filtering by year.  
-- **Stacked Area Chart**: Yearly/monthly trends in catches per species.  
-- **Violin Plots**: Distribution of fish lengths per species, showing variability and medians.  
-
----
-
-## Folder Structure
-
-```text
-fish-visualization/
-├── data/
-│   ├── fish.csv            # full dataset (~11 MB)
-│   └── creeks.geojson      # creek coordinates
-├── notebooks/
-│   ├── scraper.ipynb       # scraping workflow
-│   └── app_dev.ipynb       # cleaning + Dash app
-├── docs/                   # screenshots
-├── requirements.txt
-├── README.md
-└── LICENSE
-```
-
----
-
-## Installation and Usage
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/Blc95/fish-visualization.git
-cd fish-visualization
-
-# install dependencies
-pip install -r requirements.txt
-
-# Jupyter Notebook version
-jupyter notebook notebooks/app_dev.ipynb
-
-# or, if refactored into app.py
-python app.py
-```
-
----
-
-## Screenshots form App
-
-![screenshot_01](docs/screenshot_01.png)
-![screenshot_02](docs/screenshot_02.png)
-
----
 
 ## Limitations
 

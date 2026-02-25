@@ -1,11 +1,12 @@
-dash
-dash-bootstrap-components
-dash-leaflet
-plotly
-pandas
-requests
-beautifulsoup4
-selenium
-jupyter     # optional, for running notebooks
-notebook    # optional, for running notebooks
+dash==2.17.1
+dash-bootstrap-components==1.6.0
+dash-leaflet==1.0.15
+plotly==5.22.0
+pandas==2.2.2
+requests==2.32.3
+beautifulsoup4==4.12.3
+selenium==4.22.0
 
+# optional
+jupyter==1.0.0
+notebook==7.2.1
