@@ -14,6 +14,8 @@ from fishviz.figures.charts import (
     create_violin_plot_length,
 )
 
+from fishviz.initial_figures import make_initial_figures
+
 
 def create_app():
     app = dash.Dash(
@@ -24,16 +26,15 @@ def create_app():
 
     bundle = load_bundle()
     default_map = make_default_map(bundle)
-
-    empty = go.Figure()
+    figs = make_initial_figures(bundle)
 
     app.layout = make_layout(
         default_map,
-        create_sunburst_chart(bundle.summary_df),
-        create_histogram_all_years(bundle.summary_df, None),
-        create_histogram_top_catchers(bundle.summary_df),
-        create_stacked_area_chart(bundle.summary_df),
-        create_violin_plot_length(bundle.summary_df),
+        figs["sunburst"],
+        figs["hist_all_years"],
+        figs["hist_top_catchers"],
+        figs["stacked_area"],
+        figs["violin"],
     )
 
     register_callbacks(app, bundle)

@@ -67,30 +67,16 @@ fish-visualization/
 ## Run locally
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+git clone https://github.com/Blc95/fish-visualization.git 
+
+cd fish-visualization 
+python -m venv .venv source .venv/bin/activate # Windows: .venv\Scripts\activate 
+
+pip install -r requirements.txt 
+
 PYTHONPATH=src python app.py
 
-
----
-
-## Installation and Usage
-
-Clone the repository and install dependencies:
-
-```bash
-git clone https://github.com/Blc95/fish-visualization.git
-cd fish-visualization
-
-# install dependencies
-pip install -r requirements.txt
-
-# Jupyter Notebook version
-jupyter notebook notebooks/app_dev.ipynb
-
-# or, if refactored into app.py
-python app.py
+Open: http://127.0.0.1:8051
 ```
 
 ## Data Sources
